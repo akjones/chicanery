@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ci.jruby.org/job/jruby-dist-master/lastBuild/api/xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/0.7.65
+      Date:
+      - Tue, 11 Feb 2014 07:59:49 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Connection:
+      - keep-alive
+      X-Jenkins:
+      - '1.534'
+      X-Jenkins-Session:
+      - 6e125f57
+      Content-Length:
+      - '1062'
+      X-Powered-By:
+      - Servlet/2.5 (Winstone/0.9.10)
+    body:
+      encoding: UTF-8
+      string: |-
+        <freeStyleBuild><action><cause><shortDescription>Started by timer</shortDescription></cause></action><action><buildsByBranchName><originmaster><buildNumber>1926</buildNumber><revision><SHA1>fd0306633e4c1708d0ceba4710b4e06dda158fa3</SHA1><branch><SHA1>fd0306633e4c1708d0ceba4710b4e06dda158fa3</SHA1><name>origin/master</name></branch></revision></originmaster></buildsByBranchName><lastBuiltRevision><SHA1>fd0306633e4c1708d0ceba4710b4e06dda158fa3</SHA1><branch><SHA1>fd0306633e4c1708d0ceba4710b4e06dda158fa3</SHA1><name>origin/master</name></branch></lastBuiltRevision><remoteUrl>git://jruby.org/jruby.git</remoteUrl><scmName></scmName></action><action></action><action></action><action></action><building>false</building><duration>335838</duration><estimatedDuration>582108</estimatedDuration><fullDisplayName>jruby-dist-master #1926</fullDisplayName><id>2014-02-10_21-52-31</id><keepLog>false</keepLog><number>1926</number><result>FAILURE</result><timestamp>1392097951792</timestamp><url>http://ci.jruby.org/job/jruby-dist-master/1926/</url><builtOn></builtOn><changeSet><item><affectedPath>core/src/main/java/org/jruby/truffle/runtime/core/array/RubyArray.java</affectedPath><affectedPath>core/src/main/java/org/jruby/truffle/nodes/core/ArrayNodes.java</affectedPath><commitId>fd0306633e4c1708d0ceba4710b4e06dda158fa3</commitId><timestamp>1392081669000</timestamp><author><absoluteUrl>http://ci.jruby.org/user/lucas.allan</absoluteUrl><fullName>lucas.allan</fullName></author><comment>[Truffle] - Initial implementation of Array#hash.
+
+        This initial implementation uses the hashCode method of the elements to
+        calculate the hash number. This might not be ideal because some objects
+        maybe have the same hashCode number. But for now, it's good enough.
+        </comment><date>2014-02-10 17:21:09 -0800</date><id>fd0306633e4c1708d0ceba4710b4e06dda158fa3</id><msg>[Truffle] - Initial implementation of Array#hash.</msg><path><editType>edit</editType><file>core/src/main/java/org/jruby/truffle/nodes/core/ArrayNodes.java</file></path><path><editType>edit</editType><file>core/src/main/java/org/jruby/truffle/runtime/core/array/RubyArray.java</file></path></item><kind>git</kind></changeSet><culprit><absoluteUrl>http://ci.jruby.org/user/Charles%20Oliver%20Nutter</absoluteUrl><fullName>Charles Oliver Nutter</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/Subramanya%20Sastry</absoluteUrl><fullName>Subramanya Sastry</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/Thomas%20E.%20Enebo</absoluteUrl><fullName>Thomas E. Enebo</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/chris</absoluteUrl><fullName>chris</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/davidegrayson</absoluteUrl><fullName>davidegrayson</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/dmarcotte</absoluteUrl><fullName>dmarcotte</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/grddev</absoluteUrl><fullName>grddev</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/greg</absoluteUrl><fullName>greg</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/hasari</absoluteUrl><fullName>Hiro Asari</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/lucas.allan</absoluteUrl><fullName>lucas.allan</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/m.kristian</absoluteUrl><fullName>m.kristian</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/mark</absoluteUrl><fullName>mark</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/phil.h.smith</absoluteUrl><fullName>phil.h.smith</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/ratnikov</absoluteUrl><fullName>ratnikov</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/steve.j.cook</absoluteUrl><fullName>steve.j.cook</fullName></culprit><culprit><absoluteUrl>http://ci.jruby.org/user/tduehr</absoluteUrl><fullName>tduehr</fullName></culprit></freeStyleBuild>
+    http_version: 
+  recorded_at: Tue, 11 Feb 2014 07:59:50 GMT
+recorded_with: VCR 2.5.0
