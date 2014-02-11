@@ -11,16 +11,16 @@ module Chicanery
     end
 
     def path
-      uri.query ? "#{uri.path}?#{uri.query}" : uri.path
+      @uri.query ? "#{@uri.path}?#{@uri.query}" : uri.path
     end
 
     def get
       req = Net::HTTP::Get.new path
       req.basic_auth options[:user], options[:password] if options[:user] and options[:password]
-      http_opts = { use_ssl: uri.scheme == 'https' }
+      http_opts = { use_ssl: @uri.scheme == 'https' }
       http_opts[:verify_mode] = OpenSSL::SSL::VERIFY_NONE unless options[:verify_ssl]
       start = Time.now
-      res = Net::HTTP.start uri.host, uri.port, http_opts do |https|
+      res = Net::HTTP.start @uri.host, @uri.port, http_opts do |https|
         https.request req
       end
       @duration, @code, @body = (Time.now - start), res.code, res.body

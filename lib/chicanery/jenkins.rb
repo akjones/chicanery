@@ -28,7 +28,7 @@ module Chicanery
         }
 
         jobs["woo"] = job
-        
+
         jobs
       end
 
